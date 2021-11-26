@@ -1,0 +1,13 @@
+#Implemente a função nVogais que devolve o número de vogais que uma frase contém (não precisa se preocupar com acentos).
+# colocamos a frase toda em minúsculas
+def nVogais(frase):
+  return len( [c for c in frase.lower() if c in 'aeiou'] )
+
+# ou incluímos as vogais maiúsculas no filtro
+def nVogais(frase):
+  return len( [c for c in frase if c in 'aeiouAEIOU'] )  
+  
+  
+# ou
+def nVogais(frase):
+   return sum([frase.count(c) for c in 'aeiou'])  
